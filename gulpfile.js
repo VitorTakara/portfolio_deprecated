@@ -58,7 +58,7 @@ gulp.task("sass", function() {
 
 gulp.task("js", function() {
   return gulp
-    .src(["app/js/menu.js"])
+    .src(["app/js/plugins/slideout/slideout.min.js", "app/js/menu.js"])
     //.pipe(sourcemaps.init()) ATIVAR SE QUISER SOURCEMAP
     .pipe(rigger())
     .pipe(concat("main.js"))

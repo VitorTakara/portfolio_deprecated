@@ -1,4 +1,4 @@
-<script>
+
   var slideout = new Slideout({
     'panel': document.getElementById('panel'),
     'menu': document.getElementById('menu'),
@@ -10,4 +10,3 @@
   document.querySelector('.toggle-button').addEventListener('click', function() {
     slideout.toggle();
   });
-</script>

@@ -6,7 +6,9 @@
   "repository": "https://github.com/VitorTakara/11art",
   "author": "Vitor Takara",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "slideout": "^1.0.1"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
