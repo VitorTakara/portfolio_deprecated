@@ -1,7 +1,6 @@
-
   var slideout = new Slideout({
     'panel': document.getElementById('panel'),
-    'menu': document.getElementById('menu'),
+    'menu': document.getElementById('menuMobile'),
     'padding': 256,
     'tolerance': 70
   });

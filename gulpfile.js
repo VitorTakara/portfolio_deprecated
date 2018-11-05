@@ -58,7 +58,10 @@ gulp.task("sass", function() {
 
 gulp.task("js", function() {
   return gulp
-    .src(["app/js/plugins/slideout/slideout.min.js", "app/js/menu.js"])
+    .src(["app/js/plugins/slideout.min.js",
+          "app/js/plugins/tingle.js",
+          "app/js/modal.js",
+          "app/js/menu.js"])
     //.pipe(sourcemaps.init()) ATIVAR SE QUISER SOURCEMAP
     .pipe(rigger())
     .pipe(concat("main.js"))
@@ -87,7 +90,7 @@ gulp.task("watch", function() {
   gulp.watch("app/js/**/*.js", ["js"]);
   gulp.watch("app/img/**/*.*", ["img"]);
   console.log(
-    "\n\n\n11Art - GulpFile\n(~O3O')~ ASSISTINDO MUDANCAS! (~O3O')~\n\n\n"
+    "\n\n\nWatching Changes\n\n\n"
   );
 });
 
@@ -95,7 +98,7 @@ gulp.task("watch", function() {
 
 gulp.task("finish", function() {
   console.log(
-    "\n\n\n11Art - GulpFile\n(~‾3‾)~ BUILD FINALIZADO! (~‾3‾)~\n\n\n"
+    "\n\n\nBuild Finished\n\n\n"
   );
 });
 

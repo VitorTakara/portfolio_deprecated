@@ -1,18 +1,21 @@
 // Variáveis
-@import "variables/index.scss";
-
+@import "variables/index";
 
 // Plugins
-@import "plugins/normalize/index.scss";
+@import "plugins/normalize/index";
+@import "plugins/slideout/index";
+@import "plugins/tingle/index";
+
+// Containers
+@import "containers/menu/index";
 
 // Base
-@import "base/index.scss";
+@import "base/index";
 
 // Views
 
-
 // Helper classes
-@import "helper classes/index.scss";
+@import "helper classes/index";
 
 // Media Queries
-@import "media queries/index.scss";
+@import "media queries/index";

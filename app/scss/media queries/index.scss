@@ -1,0 +1,18 @@
+@media screen and (min-width: 780px) {
+  #menu, .toggle-button {
+    display: none!important;
+  }
+
+  .grid-container {
+	  grid-template-areas: 
+	    'header header header header header header'
+	    'menu main main main main main'
+	    'footer footer footer footer footer footer';
+	}
+
+	.grid-menu{
+		display: block;
+	}
+
+
+}
