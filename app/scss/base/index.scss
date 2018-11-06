@@ -32,3 +32,66 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 0;
 }
+
+._INFO_{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  -webkit-transition: padding .2s ease;
+     -moz-transition: padding .2s ease;
+      -ms-transition: padding .2s ease;
+       -o-transition: padding .2s ease;
+          transition: padding .2s ease;
+}
+
+.grid-item img:hover {
+  padding: 5px;
+}
+
+

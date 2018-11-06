@@ -59,14 +59,16 @@ gulp.task("sass", function() {
 gulp.task("js", function() {
   return gulp
     .src(["app/js/plugins/slideout.min.js",
+          "app/js/plugins/masonry.min.js",
           "app/js/plugins/tingle.js",
           "app/js/modal.js",
-          "app/js/menu.js"])
-    //.pipe(sourcemaps.init()) ATIVAR SE QUISER SOURCEMAP
+          "app/js/menu.js",
+          "app/js/masonry.js"])
+    .pipe(sourcemaps.init()) //ATIVAR SE QUISER SOURCEMAP
     .pipe(rigger())
     .pipe(concat("main.js"))
     .pipe(uglify(/* options */))
-    //.pipe(sourcemaps.write()) ATIVAR SE QUISER SOURCEMAP
+    .pipe(sourcemaps.write()) //ATIVAR SE QUISER SOURCEMAP
     .pipe(gulp.dest("dist/js"));
 });
 

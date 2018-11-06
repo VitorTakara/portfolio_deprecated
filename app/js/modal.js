@@ -1,31 +1,36 @@
 // instanciate new modal
-var modal = new tingle.modal({
+var tingle_modal = new tingle.modal({
     footer: true,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
     closeLabel: "Close",
     beforeOpen: function() {
-        // set content
-        modal.setContent('<h1>here\'s some content</h1>');
+        //Nothing
     },
     onClose: function() {
-        modal.setContent('');
+        tingle_modal.setContent('');
     }
 });
 
+function openModal(el){
+    let modalTemplateBtn = '';
+    let el_info = el.querySelector("._INFO_");
+    let modal = {
+        title: el_info.querySelector(".title").textContent,
+        description: el_info.querySelector(".description").textContent,
+        btn_link: el_info.querySelector(".btn-link").textContent
+    }
 
-// add a button
-modal.addFooterBtn('Button label', 'tingle-btn tingle-btn--primary', function() {
-    // here goes some logic
-    modal.close();
-});
+    let modalTemplate = `
+        <h2>${modal.title}</h2>
+        <p>${modal.description}</p>
+    `;
 
-// add another button
-modal.addFooterBtn('Dangerous action !', 'tingle-btn tingle-btn--danger', function() {
-    // here goes some logic
-    modal.close();
-});
+    if(modal.btn_link)
+        modalTemplateBtn = `
+        <a href="${modal.btn_link}" target="_blank">Visitar</a>
+    `
 
-// open modal
-modal.open();
-
+    tingle_modal.setContent(modalTemplate + modalTemplateBtn);
+    tingle_modal.open();
+}
