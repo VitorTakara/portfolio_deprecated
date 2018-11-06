@@ -24,17 +24,21 @@
               <button class="toggle-button">☰</button>
               <p>Header</p>
           </div>
-          <div class="grid-menu">menu</div>
+          <div class="grid-menu">
+            <button type="button" onclick="filtrarMasonry('todos')">Todos</button>
+            <button type="button" onclick="filtrarMasonry('web')">Web</button>
+            <button type="button" onclick="filtrarMasonry('design')">Design</button>
+          </div>
           <div class="grid-main">
 
 
 
-            <div class="grid">
+            <div class="grid masonry">
               <div class="grid-sizer"></div>
               
 
 
-              <div class="grid-item web" onclick="openModal(this)">
+              <div class="grid-item animated web" onclick="openModal(this)">
                 <div class="_INFO_">
                   <span class="title">Test Title</span>
                   <span class="description">Description</span>
@@ -53,28 +57,28 @@
 
 
 
-              <div class="grid-item design">
+              <div class="grid-item animated design">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
               </div>
-              <div class="grid-item">
+              <div class="grid-item animated web">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
               </div>
-              <div class="grid-item">
+              <div class="grid-item animated web">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
               </div>
-              <div class="grid-item">
+              <div class="grid-item animated design">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
               </div>
-              <div class="grid-item">
+              <div class="grid-item animated design">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
               </div>
-              <div class="grid-item">
+              <div class="grid-item animated design">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
               </div>
-              <div class="grid-item">
+              <div class="grid-item animated design">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
               </div>
-              <div class="grid-item">
+              <div class="grid-item animated design">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
               </div>
             </div>

@@ -11,9 +11,9 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'main main main main main main'
-    'footer footer footer footer footer footer';
+    'header'
+    'main'
+    'footer';
   grid-gap: 10px;
   background-color: #2196F3;
   padding: 10px;
@@ -71,7 +71,7 @@ body { font-family: sans-serif; }
 
 .grid-sizer,
 .grid-item {
-  width: 33.333%;
+  width: 50%;
 }
 
 .grid-item {
