@@ -1,18 +1,62 @@
+@media screen and (min-width: 425px) {
+	.grid-menu-buttons{
+		flex-flow: row;
+	}
+
+	.grid-menu-buttons button{
+		margin-left: 10px;
+	}
+
+	.grid-sizer,
+	.grid-item {
+  	width: 50%;
+	}
+}
+
 @media screen and (min-width: 780px) {
+	
+	.grid {
+		background: #DDD;
+		width: 95%;
+	}
+
   #menu, .toggle-button {
     display: none!important;
   }
 
   .grid-container {
 	  grid-template-areas: 
-	    'header header header header header header header'
-	    'menu main main main main main main main main'
-	    'footer footer footer footer footer footer footer';
+	    'header header'
+	    'menu main '
+			'footer footer ';
+			
+			grid-template-columns: 15% 85%;
 	}
 
 	.grid-menu{
 		display: block;
 	}
 
+	.grid-header{
+		align-items: center;
+    padding: 0px 50px;
+	}
+
+	.menuDesktop{
+		display: flex;
+	}
+
+	.menuDesktop a{
+		margin-left: 10px;
+	}
+
+	.grid-menu-buttons{
+		display: flex;
+    align-items: center;
+		flex-direction: column;
+		position: sticky;
+		top: 45vh;
+	}
+	
 
 }

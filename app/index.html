@@ -17,17 +17,26 @@
     </nav>
 
     <main id="panel">
-      <header>
         
         <div class="grid-container tingle-content-wrapper">
-          <div class="grid-header">
+          <header class="grid-header">
               <button class="toggle-button">☰</button>
-              <p>Header</p>
-          </div>
+              <div>
+                <p>LOGO</p>
+              </div>
+
+              <nav class="menuDesktop">
+                <a href="#">Portfolio</a>
+                <a href="#">About me</a>
+                <a href="#">Contact</a>
+              </nav>
+          </header>
           <div class="grid-menu">
-            <button type="button" onclick="filtrarMasonry('todos')">Todos</button>
-            <button type="button" onclick="filtrarMasonry('web')">Web</button>
-            <button type="button" onclick="filtrarMasonry('design')">Design</button>
+            <div class="grid-menu-buttons">
+              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('todos')">Todos</button>
+              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('web')">Web</button>
+              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('design')">Design</button>
+            </div>
           </div>
           <div class="grid-main">
 
@@ -85,9 +94,8 @@
 
 
           </div>
-          <div class="grid-footer">Footer</div>
+          <div class="grid-footer">Made with &hearts; by Vitor Takara</div>
         </div>
-      </header>
     </main>
 
     <script src="js/main.js"></script>

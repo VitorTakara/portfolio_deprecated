@@ -12,35 +12,68 @@ body {
   display: grid;
   grid-template-areas:
     'header'
+    'menu'
     'main'
     'footer';
   grid-gap: 10px;
-  background-color: #2196F3;
+  background-color: rgb(236, 236, 236);
   padding: 10px;
 }
 
 .grid-header{
 	display: flex;
 	justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.menuDesktop{
+  display: none;
 }
 
 .grid-menu{
-	display: none;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 10px 0;
 }
+
+.grid-menu-buttons{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 0;
 }
 
 ._INFO_{
   display: none;
 }
 
+.grid-footer{
+  text-align: center;
+  padding: 20px 0;
+  color: #aeaeae;
+  font-size: 0.9rem;
+}
 
 
 
 
+.btn-portfolio{
+  background: white;
+  border: 1px solid #e4e4e4;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #4f4f4f;
+  min-width: 100px;
+  margin-bottom: 10px;
+}
 
 
 
@@ -58,6 +91,7 @@ body { font-family: sans-serif; }
 
 .grid {
   background: #DDD;
+  width: 100%;
 }
 
 /* clear fix */
@@ -71,7 +105,7 @@ body { font-family: sans-serif; }
 
 .grid-sizer,
 .grid-item {
-  width: 50%;
+  width: 100%;
 }
 
 .grid-item {
