@@ -1,3 +1,14 @@
 #menuMobile{
-	background: red;
+	display: flex;
+    background: white;
+    flex-flow: column;
+    align-items: center;
+
+    a {
+    	color: $color-primary;
+    	width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+    }
 }

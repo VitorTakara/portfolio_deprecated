@@ -280,7 +280,7 @@ display: flex;
 }
 
 .tingle-modal-box__content p{
-  color: #353535;
+  color: $color-primary;
 }
 
 .tingle-modal-box__content .buttons{
@@ -291,9 +291,9 @@ display: flex;
 .tingle-modal-box__content a.visitar,{
   margin-top: 10px;
     color: white;
-    background: #353535;
+    background: $color-primary;
     text-decoration: none;
-    border: 1px solid #353535;
+    border: 1px solid $color-primary;
     padding: 10px 20px;
     border-radius: 50px;
     margin-left: 10px;

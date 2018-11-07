@@ -4,7 +4,10 @@ var grid = document.querySelector('.grid');
 var msnry = new Masonry( grid, {});
 
 
-function filtrarMasonry(portfolioType) {
+function filtrarMasonry(portfolioType, btn) {
+	document.querySelectorAll(".btn-portfolio").forEach(i => i.classList.remove("is-active")); // Limpa todos os botões ativos
+	btn.classList.add("is-active"); // Ativa o botão selecionado
+
 	let masonry = document.querySelector(".masonry").querySelectorAll(".grid-item");
 
 	if ( portfolioType == "todos" )

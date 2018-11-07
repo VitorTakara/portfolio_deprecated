@@ -13,7 +13,12 @@
   <body>
         
     <nav id="menuMobile">
-      <h2>Menu</h2>
+        <div class="logo-container">
+          <img src="https://via.placeholder.com/500">
+        </div>
+        <a href="#">Portfolio</a>
+        <a href="#">About me</a>
+        <a href="#">Contact</a>
     </nav>
 
     <main id="panel">
@@ -21,8 +26,8 @@
         <div class="grid-container tingle-content-wrapper">
           <header class="grid-header">
               <button class="toggle-button">☰</button>
-              <div>
-                <p>LOGO</p>
+              <div class="mini-logo-container">
+                <img src="https://via.placeholder.com/500">
               </div>
 
               <nav class="menuDesktop">
@@ -33,9 +38,9 @@
           </header>
           <div class="grid-menu">
             <div class="grid-menu-buttons">
-              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('todos')">Todos</button>
-              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('web')">Web</button>
-              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('design')">Design</button>
+              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('todos', this)">Todos</button>
+              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('web', this)">Web</button>
+              <button class="btn-portfolio" type="button" onclick="filtrarMasonry('design', this)">Design</button>
             </div>
           </div>
           <div class="grid-main">

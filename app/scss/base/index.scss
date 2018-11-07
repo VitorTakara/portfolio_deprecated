@@ -64,6 +64,26 @@ body {
   background: none;
   border: none;
   font-size: 1.5rem;
+  outline: none;
+  cursor: pointer;
+  color: $color-primary;
+}
+
+.logo-container{
+  margin-bottom: 20px;
+  width: 40%;
+    padding-top: 20px;
+    img{
+      width: 100%;
+    }
+    }  
+
+.mini-logo-container{
+  width: 50px;
+img{
+      width: 100%;
+    }
+  
 }
 
 
@@ -71,14 +91,28 @@ body {
   background: white;
   border: none;
   font-size: 1.2rem;
-  color: #4f4f4f;
+  color: lighten($color-primary, 25%);
   padding: 10px 0;
-  
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: color .2s ease-in-out;
+     -moz-transition: color .2s ease-in-out;
+      -ms-transition: color .2s ease-in-out;
+       -o-transition: color .2s ease-in-out;
+          transition: color .2s ease-in-out;
+}
+
+.btn-portfolio.is-active{
+  color: $color-primary;
+}
+
+.btn-portfolio:hover{
+  color: $color-primary;
 }
 
 
 .menuDesktop a{
-  color: #353535;
+  color: $color-primary;
       text-decoration: none;
 padding: 10px 20px;
 }

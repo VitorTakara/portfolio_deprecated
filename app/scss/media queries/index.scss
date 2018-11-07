@@ -19,6 +19,10 @@
 }
 
 @media screen and (min-width: 780px) {
+
+	.mini-logo-container{
+  width: 75px;
+}
 	.btn-portfolio{
   font-size: 1rem;
   width: 100%;
@@ -50,7 +54,7 @@
 
 	.grid-header{
 		align-items: center;
-    	padding: 10px 50px;
+    	padding: 10px 5%;
 	}
 
 	.menuDesktop{
