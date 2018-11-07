@@ -4,7 +4,7 @@
   bottom: 0;
   width: 256px;
   min-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   z-index: 0;
   display: none;
@@ -35,3 +35,20 @@
 .slideout-open .slideout-menu {
   display: block;
 }
+
+#menuMobile{
+  display: flex;
+    background: white;
+    flex-flow: column;
+    align-items: center;
+background: #f7f7f7;
+
+    a {
+      color: $color-primary;
+      width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+    }
+}
+

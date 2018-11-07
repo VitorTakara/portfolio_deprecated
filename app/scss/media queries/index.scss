@@ -68,6 +68,8 @@
 		position: sticky;
 		top: 40vh;
 	}
-	
+	#panel{
+    	transform: translateX(0px)!important;
+    }
 
 }

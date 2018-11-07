@@ -8,6 +8,18 @@ body {
 .grid-main { grid-area: main; }
 .grid-footer { grid-area: footer; }
 
+
+.grid-container-main{
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -83,7 +95,7 @@ body {
 img{
       width: 100%;
     }
-  
+
 }
 
 
