@@ -1,9 +1,9 @@
 // instanciate new modal
 var tingle_modal = new tingle.modal({
-    footer: true,
+    footer: false,
     stickyFooter: false,
     closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Close",
+    closeLabel: "Fechar",
     beforeOpen: function() {
         //Nothing
     },
@@ -11,6 +11,10 @@ var tingle_modal = new tingle.modal({
         tingle_modal.setContent('');
     }
 });
+
+function closeModal(){
+    tingle_modal.close();
+}
 
 function openModal(el){
     let modalTemplateBtn = '';
@@ -21,16 +25,19 @@ function openModal(el){
         btn_link: el_info.querySelector(".btn-link").textContent
     }
 
+    if(modal.btn_link)
+        modalTemplateBtn = `
+        <a class="visitar" href="${modal.btn_link}" target="_blank">Visitar</a>
+    `;
+
     let modalTemplate = `
         <h2>${modal.title}</h2>
         <p>${modal.description}</p>
+        <div class="buttons">
+            ${modalTemplateBtn}
+        </div>
     `;
 
-    if(modal.btn_link)
-        modalTemplateBtn = `
-        <a href="${modal.btn_link}" target="_blank">Visitar</a>
-    `
-
-    tingle_modal.setContent(modalTemplate + modalTemplateBtn);
+    tingle_modal.setContent(modalTemplate);
     tingle_modal.open();
 }
