@@ -13,6 +13,32 @@ body {
 .grid-footer { grid-area: footer; }
 
 
+.grid-container-main .grid-main{
+  padding: 10px 15px;
+}
+
+.aboutme .logo-container > img{
+ border-radius: 50%;
+}
+
+.aboutme{
+  display: flex;
+  flex-flow: column;
+
+  &-info{
+    color: $color-primary;
+    p{
+      margin-top:0;
+      font-size: 0.8rem;
+    }
+
+    h2{
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+}
+
 .grid-container-main{
   display: grid;
   grid-template-areas:
