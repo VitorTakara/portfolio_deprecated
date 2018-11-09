@@ -22,6 +22,15 @@
 
 @media screen and (min-width: 780px) {
 
+.grid-menu .grid-menu-contactbuttons{
+	display: flex;
+}
+
+
+.grid-menu .grid-menu-contactbuttons a{
+	font-size: 1.3em;
+	color: lighten($color-primary, 25%);
+}
 
 #menuMobile{
 	display: none;
@@ -70,11 +79,21 @@
 
 	.grid-menu-buttons{
 		display: flex;
-    align-items: center;
+   		align-items: center;
 		flex-direction: column;
 		position: sticky;
 		top: 40vh;
 	}
+
+	.grid-menu-contactbuttons{
+		top: 93vh;	
+	}
+
+	.grid-menu-contactbuttons a{
+		padding: 10px;
+	}
+
+
 	#panel{
     	transform: translateX(0px)!important;
     }

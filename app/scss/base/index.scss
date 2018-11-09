@@ -2,15 +2,46 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+a{
+  text-decoration: none;
+  color: $color-primary;
+}
+
+
 body {
+  font-family: 'Raleway', sans-serif!important;
+  font-weight: 300;
   width: 100%;
   height: 100%;
 }
+
+
 
 .grid-header { grid-area: header; }
 .grid-menu { grid-area: menu; }
 .grid-main { grid-area: main; }
 .grid-footer { grid-area: footer; }
+
+
+.grid-menu .grid-menu-contactbuttons{
+  display: none;
+}
+
+  .grid-menu-contactbuttons{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: sticky;
+    top: 87vh;  
+  }
+
+  #menuMobile > .grid-menu-contactbuttons > a{
+    padding: 10px;
+    font-size: 1.4em; 
+    color: lighten($color-primary, 25%);
+  }
 
 
 .grid-container-main .grid-main{
@@ -137,19 +168,24 @@ img{
   padding: 10px 0;
   outline: none;
   cursor: pointer;
-  -webkit-transition: color .2s ease-in-out;
-     -moz-transition: color .2s ease-in-out;
-      -ms-transition: color .2s ease-in-out;
-       -o-transition: color .2s ease-in-out;
-          transition: color .2s ease-in-out;
 }
 
 .btn-portfolio.is-active{
   color: $color-primary;
 }
 
-.btn-portfolio:hover{
-  color: $color-primary;
+.btn-portfolio:hover,
+.grid-menu-contactbuttons > a:hover{
+  color: $color-primary!important;
+}
+
+.btn-portfolio,
+.grid-menu-contactbuttons > a {
+  -webkit-transition: color .2s ease;
+       -moz-transition: color .2s ease;
+        -ms-transition: color .2s ease;
+         -o-transition: color .2s ease;
+            transition: color .2s ease 
 }
 
 

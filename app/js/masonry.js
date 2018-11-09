@@ -1,7 +1,11 @@
 // vanilla JS
 // init with element
-var grid = document.querySelector('.grid');
-var msnry = new Masonry( grid, {});
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var grid = document.querySelector('.grid');
+	var msnry = new Masonry( grid, {});
+});
+
 
 
 function filtrarMasonry(portfolioType, btn) {
