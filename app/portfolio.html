@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+        <meta http-equiv="cleartype" content="on">
+        <meta name="MobileOptimized" content="320">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css"
+            integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW"
+            crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css"
+            integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+            crossorigin="anonymous">
+        <link
+            href="https://fonts.googleapis.com/css?family=Raleway:300,400"
+            rel="stylesheet">
+    </head>
+    <body>
+
+        <nav id="menuMobile">
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/500">
+            </div>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="aboutme.html">About me</a>
+            <a href="contact.html">Contact</a>
+            <div class="grid-menu-contactbuttons">
+                <a href="#">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-apple"></i>
+                </a>
+            </div>
+        </nav>
+
+        <main id="panel">
+
+            <div class="grid-container tingle-content-wrapper">
+                <header class="grid-header animated fadeInUpSmall slow">
+                    <button class="toggle-button">☰</button>
+                    <div class="mini-logo-container">
+                        <img src="https://via.placeholder.com/500">
+                    </div>
+
+                    <nav class="menuDesktop">
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="aboutme.html">About me</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </header>
+                <div class="grid-menu animated fadeInUpSmall slow">
+                    <div class="grid-menu-buttons">
+                        <button
+                            class="btn-portfolio"
+                            type="button"
+                            onclick="filtrarMasonry('todos', this)">Todos</button>
+                        <button
+                            class="btn-portfolio"
+                            type="button"
+                            onclick="filtrarMasonry('web', this)">Web</button>
+                        <button
+                            class="btn-portfolio"
+                            type="button"
+                            onclick="filtrarMasonry('design', this)">Design</button>
+                    </div>
+                    <div class="grid-menu-contactbuttons">
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-main animated fadeInUpSmall slow delay-1s">
+
+                    <div class="grid masonry">
+                        <div class="grid-sizer"></div>
+
+                        <div class="grid-item animated web" onclick="openModal(this)">
+                            <div class="_INFO_">
+                                <span class="title">Test Title</span>
+                                <span class="description">Description</span>
+                                <span class="btn-link">
+                                    https://teste.com
+                                </span>
+                                <div class="images">
+                                    <span>https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg</span>
+                                    <span>https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg</span>
+                                    <span>https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg</span>
+                                </div>
+                            </div>
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg"/>
+                        </div>
+
+                        <div class="grid-item animated design">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg"/>
+                        </div>
+                        <div class="grid-item animated web">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg"/>
+                        </div>
+                        <div class="grid-item animated web">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"/>
+                        </div>
+                        <div class="grid-item animated design">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg"/>
+                        </div>
+                        <div class="grid-item animated design">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg"/>
+                        </div>
+                        <div class="grid-item animated design">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg"/>
+                        </div>
+                        <div class="grid-item animated design">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg"/>
+                        </div>
+                        <div class="grid-item animated design">
+                            <img
+                                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="grid-footer animated fadeInUpSmall slow">Made with &hearts; by Vitor Takara</div>
+            </div>
+        </main>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

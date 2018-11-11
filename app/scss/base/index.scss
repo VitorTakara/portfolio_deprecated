@@ -52,9 +52,15 @@ body {
  border-radius: 50%;
 }
 
+.index{
+
+}
+
 .aboutme{
   display: flex;
   flex-flow: column;
+  align-items: center;
+    text-align: center;
 
   &-info{
     color: $color-primary;
@@ -69,6 +75,8 @@ body {
     }
   }
 }
+
+
 
 .grid-container-main{
   display: grid;
@@ -91,6 +99,18 @@ body {
   grid-gap: 10px;
   background-color: white;
   padding: 10px;
+}
+
+.grid-container.index{
+  grid-template-areas: 'main';
+  height: 100vh;
+
+}
+
+.grid-main.index{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .grid-header{
