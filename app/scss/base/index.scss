@@ -52,9 +52,21 @@ body {
  border-radius: 50%;
 }
 
-.index{
+.index #index_content{
+  display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding: 0 15px;
+}
+
+.index .buttons a{
 
 }
+
+.index .buttons a.mywork{
+  
+}
+
 
 .aboutme{
   display: flex;

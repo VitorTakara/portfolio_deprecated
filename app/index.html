@@ -27,14 +27,35 @@
     </head>
     <body>
         <main id="panel">
-            <div class="grid-container index tingle-content-wrapper">
+            <div class="grid-container tingle-content-wrapper">
                 <div class="grid-main index fadeInUpSmall slow delay-1s">
-                     <div class="logo-container">
-                           <img src="https://via.placeholder.com/500">
-                       </div>
-                  
+                   <div id="index_grettings" class="animated fadeInDown text-center"><h3>Hello! :)</h3></div>
+                   <div id="index_content" class="animated display-none slow text-center">
+                    <div class="logo-container">
+                      <img src="https://via.placeholder.com/500">
+                    </div>
+                    <p>My name is Vitor Takara. Designer and Front-End developer. Nice to meet you! :)</p>
+                    <div class="buttons">
+                      <a class="mywork" href="#">My work</a>
+                      <a href="#">About me</a>
+                    </div>  
+                  </div>
                 </div>
             </div>
         </main>
+        <script>
+          document.addEventListener("DOMContentLoaded", function(event) {
+            let div_grettings = document.querySelector("#index_grettings");
+            let div_content = document.querySelector("#index_content");
+            setTimeout(function(){
+              div_grettings.classList.add("fadeOutDown");
+              setTimeout(function(){
+                div_grettings.classList.add("display-none");
+                div_content.classList.remove("display-none");
+                div_content.classList.add("fadeInDown");
+              }, 1000)
+            }, 1200)
+          });
+        </script>
     </body>
 </html>
