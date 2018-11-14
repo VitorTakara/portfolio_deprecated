@@ -52,6 +52,15 @@ body {
  border-radius: 50%;
 }
 
+.index{
+  min-height: 90vh;
+}
+
+#index_grettings p{
+    font-weight: 300;
+    font-size: 2em;
+}
+
 .index #index_content{
   display: flex;
     align-items: center;
@@ -59,8 +68,9 @@ body {
     padding: 0 15px;
 }
 
-.index .buttons a{
-
+.index .buttons{
+  display: flex;
+  flex-flow: row;
 }
 
 .index .buttons a.mywork{
