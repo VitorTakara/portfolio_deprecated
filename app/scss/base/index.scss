@@ -53,7 +53,10 @@ body {
 }
 
 .index{
-  min-height: 90vh;
+  min-height: 80vh;
+      display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #index_grettings p{
@@ -61,7 +64,15 @@ body {
     font-size: 2em;
 }
 
-.index #index_content{
+
+.grid-container.index > div,
+.grid-container.index,
+.index{
+  background: none;
+}
+
+#index_content{
+  background: none;
   display: flex;
     align-items: center;
     flex-flow: column;
@@ -71,10 +82,6 @@ body {
 .index .buttons{
   display: flex;
   flex-flow: row;
-}
-
-.index .buttons a.mywork{
-  
 }
 
 
@@ -123,16 +130,9 @@ body {
   padding: 10px;
 }
 
-.grid-container.index{
+.grid-container{
   grid-template-areas: 'main';
   height: 100vh;
-
-}
-
-.grid-main.index{
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .grid-header{
@@ -290,4 +290,17 @@ body { font-family: sans-serif; }
   padding: 5px;
 }
 
+  .index-bg {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    background: url('../img/index_bg2.jpg') no-repeat center center;
+    background-size: cover;
 
+    transform: scale(1.1);
+  }

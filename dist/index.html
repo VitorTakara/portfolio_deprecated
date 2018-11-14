@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Portfolio</title><meta http-equiv="cleartype" content="on"><meta name="MobileOptimized" content="320"><meta name="HandheldFriendly" content="True"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><link rel="stylesheet" type="text/css" href="css/main.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet"></head><body><main id="panel"><div class="grid-container tingle-content-wrapper"><div class="grid-main index fadeInUpSmall slow delay-1s"><div id="index_grettings" class="animated fadeInDown text-center"><p>Hi! :)</p></div><div id="index_content" class="animated display-none slow text-center"><div class="logo-container"><img src="https://via.placeholder.com/500"></div><p>My name is <span class="fw-400">Vitor Takara</span>. Designer and Front-End developer. <span class="fw-400">Nice to meet you! :)</span></p><div class="buttons"><a href="#" class="basicBox filled">My work <svg width="120" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" fill="none" width="130" height="65"/></svg> </a><a href="#" class="basicBox ml-5">About me <svg width="120" height="65" viewBox="0 0 130 65" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" fill="none" width="130" height="65"/></svg></a></div></div></div></div></main><script>document.addEventListener("DOMContentLoaded", function(event) {
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Portfolio</title><meta http-equiv="cleartype" content="on"><meta name="MobileOptimized" content="320"><meta name="HandheldFriendly" content="True"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><link rel="stylesheet" type="text/css" href="css/main.css"><link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous"></head><body><main id="panel"><div class="index-bg"></div><div class="grid-container index tingle-content-wrapper"><div class="grid-main fadeInUpSmall slow delay-1s"><div><div id="index_grettings" class="animated fadeInDown text-center"><p>Hi! :)</p></div><div id="index_content" class="animated display-none slow text-center"><div class="logo-container"><img src="https://via.placeholder.com/500"></div><p>My name is <span class="fw-400">Vitor Takara</span>. Designer and Front-End developer. <span class="fw-400">Nice to meet you! :)</span></p><div class="buttons"><a href="#" class="basicBox filled">My work <svg width="120" height="65" viewBox="0 0 120 65" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" fill="none" width="120" height="65"/></svg> </a><a href="#" class="basicBox ml-5">About me <svg width="120" height="65" viewBox="0 0 120 65" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" fill="none" width="120" height="65"/></svg></a></div></div></div></div></div></main><script src="js/paralax.min.js"></script><script>document.addEventListener("DOMContentLoaded", function(event) {
             let div_grettings = document.querySelector("#index_grettings");
             let div_content = document.querySelector("#index_content");
             setTimeout(function(){
@@ -9,4 +9,40 @@
                 div_content.classList.add("fadeInDown");
               }, 1000)
             }, 1200)
+
+            
+            let lFollowX = 0,
+                lFollowY = 0,
+                x = 0,
+                y = 0,
+                friction = 1 / 30;
+
+            function moveBackground() {
+              x += (lFollowX - x) * friction;
+              y += (lFollowY - y) * friction;
+              
+              translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+              let bg = document.querySelector('.index-bg');
+              
+              bg.style.webkitTransform = translate;
+              bg.style.MozTransform = translate;
+              bg.style.msTransform = translate;
+              bg.style.OTransform = translate;
+              bg.style.transform = translate;
+              
+
+              window.requestAnimationFrame(moveBackground);
+            }
+
+            window.addEventListener('mousemove', function(e) {
+
+              var lMouseX = Math.max(-100, Math.min(100, window.innerWidth / 2 - e.clientX));
+              var lMouseY = Math.max(-100, Math.min(100, window.innerHeight / 2 - e.clientY));
+              lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+              lFollowY = (10 * lMouseY) / 100;
+
+            })
+
+            moveBackground();
           });</script></body></html>

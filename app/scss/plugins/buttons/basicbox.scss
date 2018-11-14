@@ -10,11 +10,11 @@
   text-align: center;
   position: relative;
   cursor: pointer;
-  -webkit-transition: background .2s ease;
-     -moz-transition: background .2s ease;
-      -ms-transition: background .2s ease;
-       -o-transition: background .2s ease;
-          transition: background .2s ease;
+  -webkit-transition: background .3s ease-in-out;
+     -moz-transition: background .3s ease-in-out;
+      -ms-transition: background .3s ease-in-out;
+       -o-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
 }
 
 .basicBox.filled{
@@ -38,7 +38,7 @@ svg rect, svg path, svg polyline {
 }
 
 .basicBox.filled:hover {
-  background: white;
+  background: rgba(34, 34, 34, 0);
   color: $color-primary;
 }
 
@@ -52,7 +52,7 @@ svg rect {
 }
 .basicBox:hover svg rect {
   stroke-width: 1;
-  stroke-dasharray: 35, 245;
+  stroke-dasharray: 25, 245;
   stroke-dashoffset: 38;
   -webkit-transition: all 0.8s ease-in-out;
   -moz-transition: all 0.8s ease-in-out;

@@ -72,6 +72,13 @@ gulp.task("js", function() {
     .pipe(gulp.dest("dist/js"));
 });
 
+gulp.task("js-libs", function() {
+  return gulp
+    .src(["app/js/plugins/paralax.min.js"])
+    .pipe(uglify(/* options */))
+    .pipe(gulp.dest("dist/js"));
+});
+
 // IMAGES
 gulp.task("img", function() {
   return gulp
@@ -110,6 +117,7 @@ gulp.task("build", function() {
     "html",
     "sass",
     "js",
+    "js-libs",
     "img",
     "favicon",    
     "browser-sync",
