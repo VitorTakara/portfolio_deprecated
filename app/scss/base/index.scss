@@ -106,7 +106,7 @@ html ::-webkit-scrollbar-corner {
    width: 0;
    height: 5px;
    border-radius: 25px;
-   transition: height .3s;
+   transition: width 2s ease;
    background: $color-primary;
 }
 
@@ -189,6 +189,13 @@ input::placeholder {
    font-size: 2em;
 }
 
+.fa11art img{
+   width: 1.5em;
+}
+
+.grid-menu-contactbuttons .fa11art img{
+   width: 0.9em;
+}
 
 .grid-container.index>div,
 .grid-container.index,
@@ -206,6 +213,14 @@ input::placeholder {
    align-items: center;
    flex-flow: column;
    padding: 0 15px;
+
+   p{
+      max-width: 320px;
+   }
+
+   .logo-container img{
+      border-radius: 50%;
+   }
 }
 
 .index .buttons {
@@ -331,7 +346,6 @@ input::placeholder {
 
 }
 
-
 .btn-portfolio {
    background: none;
    border: none;
@@ -348,7 +362,7 @@ input::placeholder {
 
 .btn-portfolio:hover,
 .grid-menu-contactbuttons>a:hover {
-   color: $color-primary !important;
+   color: black !important;
 }
 
 .btn-portfolio,
