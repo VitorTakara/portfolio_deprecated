@@ -9,12 +9,13 @@ a{
 
 html{ 
    min-height: 100vh;
-   overflow: auto;
+   position: relative;
+   overflow-x: hidden;
+   overflow-y: auto;
  }
 
 body {
-   position: relative;
-   min-height: 100vh;
+  min-height: 100vh;
   font-family: 'Raleway', sans-serif!important;
   font-weight: 300;
 }
@@ -162,11 +163,11 @@ body {
   justify-content: center;
   width: 100%;
   padding: 0 10px;
-}
+} 
 
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: none;
 }
 
 ._INFO_{
@@ -208,7 +209,7 @@ img{
 
 
 .btn-portfolio{
-  background: white;
+  background: none;
   border: none;
   font-size: 1.2rem;
   color: lighten($color-primary, 25%);
@@ -312,5 +313,6 @@ body { font-family: sans-serif; }
   }
 
   .site-bg {
-   background: url('../img/site_bg.jpg') no-repeat center center;
+   background: url('../img/site_bg.jpg');
+   background-repeat: repeat;
  }

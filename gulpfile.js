@@ -57,24 +57,30 @@ gulp.task("sass", function() {
 // JS
 
 gulp.task("js", function() {
+  gulp.start('js-libs');
   return gulp
     .src(["app/js/plugins/slideout.min.js",
           "app/js/plugins/masonry.min.js",
           "app/js/plugins/tingle.js",
+          "app/js/plugins/parallax.min.js",
+          "app/js/isMobile.js",
           "app/js/modal.js",
           "app/js/menu.js",
-          "app/js/masonry.js"])
-    .pipe(sourcemaps.init()) //ATIVAR SE QUISER SOURCEMAP
+          "app/js/masonry.js",
+          "app/js/parallax.js"])
+    //.pipe(sourcemaps.init()) //ATIVAR SE QUISER SOURCEMAP
     .pipe(rigger())
     .pipe(concat("main.js"))
     .pipe(uglify(/* options */))
-    .pipe(sourcemaps.write()) //ATIVAR SE QUISER SOURCEMAP
+    //.pipe(sourcemaps.write()) //ATIVAR SE QUISER SOURCEMAP
     .pipe(gulp.dest("dist/js"));
 });
 
 gulp.task("js-libs", function() {
   return gulp
-    .src(["app/js/plugins/paralax.min.js"])
+    .src(["app/js/plugins/parallax.min.js",
+          "app/js/parallax.js",
+          "app/js/isMobile.js"])
     .pipe(uglify(/* options */))
     .pipe(gulp.dest("dist/js"));
 });

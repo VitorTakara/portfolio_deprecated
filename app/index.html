@@ -25,7 +25,7 @@
             integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
             crossorigin="anonymous">
     </head>
-    <body class="overflow-y-auto-xs">
+    <body>
         <main>
             <div class="index-bg"></div>
             <div class="grid-container index tingle-content-wrapper">
@@ -57,51 +57,24 @@
                 </div>
             </div>
         </main>
-        <script src="js/paralax.min.js"></script>
         <script>
-          document.addEventListener("DOMContentLoaded", function(event) {
-
+           document.addEventListener("DOMContentLoaded", function(event) {
+              
             // Executa animação de Boas Vindas
             let div_grettings = document.querySelector("#index_grettings");
             let div_content = document.querySelector("#index_content");
             setTimeout(function(){
-              div_grettings.classList.add("fadeOutDown");
-              setTimeout(function(){
-                div_grettings.classList.add("display-none");
-                div_content.classList.remove("display-none");
-                div_content.classList.add("fadeInDown");
-              }, 1000)
+               div_grettings.classList.add("fadeOutDown");
+               setTimeout(function(){
+                  div_grettings.classList.add("display-none");
+                  div_content.classList.remove("display-none");
+                  div_content.classList.add("fadeInDown");
+               }, 1000)
             }, 1200)
-
-            // Parallax do Background
-            let lFollowX = 0,
-                lFollowY = 0,
-                x = 0,
-                y = 0,
-                friction = 1 / 30;
-
-            function moveBackground() {
-              x += (lFollowX - x) * friction;
-              y += (lFollowY - y) * friction;
-              translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
-              let bg = document.querySelector('.index-bg');
-              bg.style.webkitTransform = translate;
-              bg.style.MozTransform = translate;
-              bg.style.msTransform = translate;
-              bg.style.OTransform = translate;
-              bg.style.transform = translate;
-              window.requestAnimationFrame(moveBackground);
-            }
-
-            window.addEventListener('mousemove', function(e) {
-              var lMouseX = Math.max(-100, Math.min(100, window.innerWidth / 2 - e.clientX));
-              var lMouseY = Math.max(-100, Math.min(100, window.innerHeight / 2 - e.clientY));
-              lFollowX = (20 * lMouseX) / 100;
-              lFollowY = (10 * lMouseY) / 100;
-            })
-
-            moveBackground();
-          });
-        </script>
+         });
+         </script>
+         <script src="js/isMobile.js"></script>
+         <script type="text/javascript" src="js/parallax.min.js"></script>
+         <script type="text/javascript" src="js/parallax.js"></script>
     </body>
 </html>

@@ -22,10 +22,6 @@
 
 @media screen and (min-width: 780px) {
 
-.overflow-y-auto-xs{
-   overflow-x: hidden;
-   overflow-y: hidden;
-}
 
 .grid-menu .grid-menu-contactbuttons{
 	display: flex;
@@ -100,7 +96,7 @@
 	}
 
 	.grid-menu-contactbuttons{
-		top: 93vh;	
+		top: 90vh;	
 	}
 
 	.grid-menu-contactbuttons a{
