@@ -1,12 +1,11 @@
-
-document.addEventListener("DOMContentLoaded", function(event) {
-   if(!isMobile()){
+document.addEventListener("DOMContentLoaded", function (event) {
+   if (!isMobile()) {
       // Parallax do Background
       let lFollowX = 0,
-      lFollowY = 0,
-      x = 0,
-      y = 0,
-      friction = 1 / 30;
+         lFollowY = 0,
+         x = 0,
+         y = 0,
+         friction = 1 / 30;
 
       function moveBackground() {
          x += (lFollowX - x) * friction;
@@ -21,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
          window.requestAnimationFrame(moveBackground);
       }
 
-      window.addEventListener('mousemove', function(e) {
+      window.addEventListener('mousemove', function (e) {
          var lMouseX = Math.max(-100, Math.min(100, window.innerWidth / 2 - e.clientX));
          var lMouseY = Math.max(-100, Math.min(100, window.innerHeight / 2 - e.clientY));
          lFollowX = (20 * lMouseX) / 100;

@@ -63,6 +63,7 @@ gulp.task("js", function() {
           "app/js/plugins/masonry.min.js",
           "app/js/plugins/tingle.js",
           "app/js/plugins/parallax.min.js",
+          "app/js/plugins/nanobar.js",
           "app/js/isMobile.js",
           "app/js/modal.js",
           "app/js/menu.js",

@@ -1,9 +1,9 @@
 let filtrarMasonry;
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
 
    var grid = document.querySelector('.grid');
-   var msnry = new Masonry( grid, {});
+   var msnry = new Masonry(grid, {});
 
    function filtrarMasonry_(portfolioType, btn) {
       document.querySelectorAll(".btn-portfolio").forEach(i => i.classList.remove("is-active")); // Limpa todos os botões ativos
@@ -11,26 +11,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       let masonry = document.querySelector(".masonry").querySelectorAll(".grid-item");
 
-      if ( portfolioType == "todos" )
+      if (portfolioType == "todos")
          masonry.forEach(i => {
             i.classList.add("fadeIn");
             i.classList.remove("display-none");
          })
       else
          masonry.forEach(i => {
-            if(!i.classList.contains(portfolioType)){
-               if(i.classList.contains("fadeIn")) 
-                  i.classList.remove("fadeIn");	
+            if (!i.classList.contains(portfolioType)) {
+               if (i.classList.contains("fadeIn"))
+                  i.classList.remove("fadeIn");
 
                i.classList.add("display-none");
-            }
-            else{
+            } else {
                i.classList.add("fadeIn");
                i.classList.remove("display-none");
             }
          })
-      
-         msnry = new Masonry( grid, {});
+
+      msnry = new Masonry(grid, {});
    }
 
    filtrarMasonry = filtrarMasonry_;
