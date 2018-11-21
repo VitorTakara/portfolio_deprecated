@@ -375,7 +375,8 @@ input::placeholder {
 }
 
 
-.menuDesktop a {
+.menuDesktop a,
+.menuDesktop span {
    color: $color-primary;
    text-decoration: none;
    padding: 10px 20px;

@@ -44,11 +44,16 @@
    align-items: center;
    border-right: 1px solid #e6e6e6;
 
-   a {
+   a:first-child{
+      display: flex;
+      justify-content: center;   
+   }
+
+   a, span {
       color: white;
       width: 100%;
       text-align: center;
       padding: 15px 0;
       text-decoration: none;
    }
-}
+} 
