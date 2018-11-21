@@ -193,6 +193,11 @@ input::placeholder {
    width: 1.5em;
 }
 
+.aboutme .grid-menu-contactbuttons .fa11art img{
+   width: 1.3em;
+   padding-top: 5px;
+}
+
 .grid-menu-contactbuttons .fa11art img{
    width: 0.9em;
 }
@@ -354,15 +359,17 @@ input::placeholder {
    padding: 10px 0;
    outline: none;
    cursor: pointer;
+   font-weight: 400;
 }
 
 .btn-portfolio.is-active {
    color: $color-primary;
+   font-weight: 700;
 }
 
 .btn-portfolio:hover,
 .grid-menu-contactbuttons>a:hover {
-   color: black !important;
+   color: $color-primary !important;
 }
 
 .btn-portfolio,
