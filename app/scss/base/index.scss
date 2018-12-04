@@ -233,6 +233,28 @@ input::placeholder {
    flex-flow: row;
 }
 
+.modal-grid-layout {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   grid-auto-rows: minmax(150px, auto);
+}
+
+.modal-grid-item {
+   font-size: 14px;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: #929796;
+   background-color: #333;
+   border-radius: 5px;
+}
+
+.span-2 {
+   grid-column-end: span 1;
+   grid-row-end: span 2;
+}
+
+
 
 .aboutme {
    display: flex;

@@ -33,11 +33,29 @@ function openModal(el) {
    let modalTemplate = `
         <h2>${modal.title}</h2>
         <p>${modal.description}</p>
+        <div class="grid-modal grid masonry">
+     
+
+        <div class="modal-grid-layout">
+
+            <div class="modal-grid-item span-2">
+               <img src="https://via.placeholder.com/315x315" />
+            </div>
+            <div class="modal-grid-item">
+               <img src="https://via.placeholder.com/150x150" />
+            </div>
+            <div class="modal-grid-item">
+               <img src="https://via.placeholder.com/150x150" />
+            </div>
+         </div>
+
+
         <div class="buttons">
             ${modalTemplateBtn}
         </div>
     `;
 
-   tingle_modal.setContent(modalTemplate);
-   tingle_modal.open();
+    tingle_modal.setContent(modalTemplate);
+    tingle_modal.open();
+        
 }
