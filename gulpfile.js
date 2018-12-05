@@ -61,7 +61,10 @@ gulp.task("js", function() {
   return gulp
     .src(["app/js/plugins/slideout.min.js",
           "app/js/plugins/masonry.min.js",
+          "app/js/plugins/masonry.extends.js",
           "app/js/plugins/tingle.js",
+          "app/js/plugins/photoswipe.js",
+          "app/js/plugins/photoswipe-ui-default.js",
           "app/js/plugins/parallax.min.js",
           "app/js/plugins/nanobar.js",
           "app/js/isMobile.js",
