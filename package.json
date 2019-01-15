@@ -9,6 +9,9 @@
   "dependencies": {
     "slideout": "^1.0.1"
   },
+    "scripts": {
+    "start": "gulp build"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",

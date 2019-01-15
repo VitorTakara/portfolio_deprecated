@@ -23,7 +23,7 @@ function openModal(el) {
       title: el_info.querySelector(".title").textContent,
       description: el_info.querySelector(".description").textContent,
       btn_link: el_info.querySelector(".btn-link").textContent,
-      images: [...el_info.querySelector(".images").querySelectorAll('span')].map(i => i.textContent)
+      videos: [...el_info.querySelector(".video").querySelectorAll('span')].map(i => i.textContent)
    }
 
    if (modal.btn_link)
@@ -36,10 +36,12 @@ function openModal(el) {
         <p>${modal.description}</p>
         <div class="grid-modal grid masonry">
      
-        <div class="modal-grid-layout">
-            <div class="modal-grid-item span-2" style="background-image: url('${modal.images[0]}')"></div>
-            <div class="modal-grid-item" style="background-image: url('${modal.images[1]}')"></div>
-            <div class="modal-grid-item" style="background-image: url('${modal.images[2]}')"></div>
+        <div class="modal-video" onclick="document.querySelector('.visitar').click();">
+            <video loop autoplay>
+                  <source src="${modal.videos[0]}" type="video/mp4">
+                  <source src="${modal.videos[1]}" type="video/webm">
+                  Seu navegador não suporta vídeo. Para visualizar, por favor utilize o Google Chrome / Firefox / Microsoft Edge.
+            </video>
         </div>
 
         <div class="buttons">
