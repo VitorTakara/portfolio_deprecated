@@ -9,7 +9,7 @@
   "dependencies": {
     "slideout": "^1.0.1"
   },
-    "scripts": {
+  "scripts": {
     "start": "gulp build"
   },
   "devDependencies": {

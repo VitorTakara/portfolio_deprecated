@@ -49,8 +49,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         let images =  Array.from(el_info.querySelector(".images").querySelectorAll('span'));
         let regex = /([a-zA-Z\.\/\:\-0-9]+)\*(\d+)\*(\d+)/;
         
-
-
         var pswpElement = document.querySelectorAll('.pswp')[0];
 
         // build items array
