@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
    function openPhotoswiper_ (el) {
         let el_info = el.querySelector("._INFO_");
         let images =  Array.from(el_info.querySelector(".images").querySelectorAll('span'));
-        let regex = /([a-zA-Z\.\/\:\-0-9]+)\*(\d+)\*(\d+)/;
+        let regex = /(.+)\*(\d+)\*(\d+)/;
         
         var pswpElement = document.querySelectorAll('.pswp')[0];
 
