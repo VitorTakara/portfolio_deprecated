@@ -508,15 +508,17 @@ html {
    display: block;
    width: 100%;
    padding: 10px;
-   -webkit-transition: padding .2s ease;
-   -moz-transition: padding .2s ease;
-   -ms-transition: padding .2s ease;
-   -o-transition: padding .2s ease;
-   transition: padding .2s ease;
+   -webkit-transition: .3s ease;
+   -moz-transition: .3s ease;
+   -ms-transition: .3s ease;
+   -o-transition: .3s ease;
+   transition: .3s ease;
+   background-color: #ffffff00;
 }
 
 .grid-item img:hover {
-   padding: 5px;
+   padding: 3px;
+   background-color: #d8d8d8;
 }
 
 .index-bg,

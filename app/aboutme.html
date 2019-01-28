@@ -51,7 +51,7 @@
          <div class="grid-main aboutme">
             <div class="aboutme-container">
                <div class="logo-container logo-container-aboutme">
-                  <a class="logo-container-baixarcv" href="https://drive.google.com/file/d/1tUX1bDjSVHEtfertrbtmQBfYWuZsSUqj/view?usp=sharing" target="_blank">Baixar CV</a>
+                  <a class="logo-container-baixarcv" href="https://drive.google.com/file/d/1cnf4Q62lT1-0TZFBQkjmGuj7XKzwZZPh/view" target="_blank">Baixar CV</a>
                   <img src="img/vitortakara.jpg">
                </div>
                <div class="aboutme-info">
@@ -79,7 +79,7 @@
                   <div id="photoshop">Photoshop</div>
                   <div id="js">Javascript</div>
                   <div id="invision">Invision</div>
-                  <div id="vuejs">VueJS</div>
+                  <div id="vuejs">VueJS2</div>
                   <div id="ui_ux">UI/UX</div>
                   <div id="jquery">JQuery</div>
                   <div id="scrum_kanban">Scrum/Kanban</div>
@@ -89,6 +89,8 @@
                   <div id="edicaovideo">Edição Vídeo</div>
                   <div id="react">React</div>
                   <div id="angular2">Angular 2+</div>
+                  <div id="php">PHP</div>
+                  <div id="mysql">MySQL</div>
                </div>
             </div>
          </div>
@@ -141,6 +143,12 @@
             }),
             angular2: new Nanobar({
                target: document.getElementById('angular2')
+            }),
+            php: new Nanobar({
+               target: document.getElementById('php')
+            }),
+            mysql: new Nanobar({
+               target: document.getElementById('mysql')
             })
          };
          
@@ -151,14 +159,15 @@
          skillBars.angularjs.go(60);
          skillBars.gulp_webpack.go(50);
          skillBars.react.go(25);
-
          skillBars.photoshop.go(99);
          skillBars.invision.go(85);
          skillBars.ui_ux.go(75);
          skillBars.scrum_kanban.go(70);
          skillBars.illustrator.go(55);
          skillBars.edicaovideo.go(50);
-         skillBars.angular2.go(15);
+         skillBars.angular2.go(20);
+         skillBars.php.go(10);
+         skillBars.mysql.go(10);
       })();
    </script>
 </body>
