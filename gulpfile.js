@@ -41,7 +41,14 @@ gulp.task("html", function() {
 
 // Favicon
 gulp.task("favicon", function() {
-   return gulp.src("app/favicon.ico").pipe(gulp.dest("dist"));
+  return gulp.src("app/favicon.png")
+  .pipe(gulp.dest("dist"));
+});
+
+// PHP Email
+gulp.task("email", function() {
+  return gulp.src("app/email/**/*.*")
+  .pipe(gulp.dest("dist/email"));
 });
 
 // SASS
@@ -129,7 +136,8 @@ gulp.task("build", function() {
     "js",
     "js-libs",
     "img",
-    "favicon",    
+    "favicon",
+    "email",
     "browser-sync",
     "finish"
   );
