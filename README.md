@@ -1,2 +1,4 @@
-# Portfolio Vitor Takara
-Work in progress...
+# Portfolio
+Meu portfólio :)
+
+Made with ♥ by Vitor Takara
